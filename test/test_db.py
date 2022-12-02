@@ -21,4 +21,4 @@ def test_insert():
 
     print (response)
 
-    assert len(response) > 0
+    assert len(response) == 0
