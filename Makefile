@@ -3,3 +3,9 @@ up:
 
 down:
 	docker compose down
+
+pytest:
+	pytest /app
+
+ci:
+	pytest
