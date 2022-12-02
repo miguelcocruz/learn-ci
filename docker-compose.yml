@@ -10,6 +10,10 @@ services:
       POSTGRES_PASSWORD: example
     volumes:
       - ./database:/docker-entrypoint-initdb.d
+    healthcheck:
+        test: ["CMD", "pg_isready", "-U", "${POSTGRES_USER}"]
+        interval: 5s
+        retries: 5
     ports:
       - "5432:5432"
 
