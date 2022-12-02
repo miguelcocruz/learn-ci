@@ -10,5 +10,7 @@ jobs:
         run: make up
       - name: Debug
         run: docker ps
+      - name: Wait
+        run: sleep 10
       - name: CI
         run: make ci
