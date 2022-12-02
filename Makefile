@@ -1,11 +1,10 @@
 up:
-	docker compose up -d
+	docker compose up -d --build
 
 down:
 	docker compose down
 
 pytest:
-	pytest /app
+	docker exec runtime pytest /app
 
-ci:
-	pytest
+ci: pytest
