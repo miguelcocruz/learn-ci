@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+  db:
+    container_name: db
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: example
+    volumes:
+      - ./database:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+
+  runtime:
+    container_name: runtime
+    build:
+      context: .
+    stdin_open: true
+    tty: true
