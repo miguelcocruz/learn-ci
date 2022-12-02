@@ -1,9 +1,10 @@
 name: PR trigger
 on: [pull-request]
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checkout repository to runtime environment
-      uses: actions/checkout@v3
-    - name: Tear up infrastructure
-      uses: make up
+  run-ci-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository to runtime environment
+        uses: actions/checkout@v3
+      - name: Tear up infrastructure
+        uses: make up
