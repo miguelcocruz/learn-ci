@@ -3,3 +3,4 @@ CREATE TABLE users (
     name VARCHAR
 );
 -- this is just a comment
+-- added another comment
