@@ -4,3 +4,4 @@ CREATE TABLE users (
 );
 -- this is just a comment
 -- added another comment
+-- another one
