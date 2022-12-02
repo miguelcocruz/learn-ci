@@ -1,7 +1,7 @@
 name: PR trigger
 on: [pull-request]
 jobs:
-  run-ci-test:
+  run-ci-test1:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository to runtime environment
