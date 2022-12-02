@@ -11,7 +11,7 @@ services:
     volumes:
       - ./database:/docker-entrypoint-initdb.d
     healthcheck:
-        test: ["CMD", "pg_isready", "-U", "${POSTGRES_USER}"]
+        test: ["CMD", "pg_isready"]
         interval: 5s
         retries: 5
     ports:
